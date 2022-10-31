@@ -22,9 +22,10 @@ rm -rf vscode_extensions.vsix
 cd ~
 echo "NASM extension installed successfully!"
 
-echo "Installing GDB and GEF"
+echo "Installing GDB, GEF and Qemu"
 sudo apt-get install gdb && bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
-echo "GDB and GEF installed successfully"
+sudo apt install qemu-user -y
+echo "GDB, GEF and Qemu installed successfully"
 
 echo "Creating and downloading toolchain scripts..."
 cd Documents
@@ -38,4 +39,4 @@ cd ~
 echo "Toolchain scripts downloaded successfully!"
 
 echo "You can now use the assembly toolchain on your Visual Studio Code machine!
-Just remember to use the bash terminal to run the toolchain script :) "
+Just remember to use the bash terminal to run the toolchain script"
